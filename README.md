@@ -1,9 +1,9 @@
 # Summary
-This text summarizes the result from calculating the return of investment for installing solar panels in Sweden. Following this text, is a more detailed description how these number are derived. More tables for other power production and inverterd sizes can be found in the appending.
+This text summarizes the result from calculating the return of investment for installing solar panels in Sweden. Following this text, is a more detailed description how these number are derived. More tables for other power production and inverterd sizes can be found in the appendix.
 
 To get a better picture of your future system, run the [Selling Power](selling_power.ipynb) jupyter notebook.
 
-Because the position of the solar panels are highly effect the power produced, the below tables give two examples of different systems that align in different cardinal direction. Remember that all values in this document are only examples and will differ in your specific setup. However, how much they differ is hard to predict. See the section of power production modelling for more details about the two systems.
+Because the position of the solar panels highly effect the power produced, the tables below give two examples of different systems that align in different cardinal direction. Remember that all values in this document are only examples and will differ in your specific setup. However, how much they differ is hard to predict. See the section of power production modelling for more details about the two systems.
 
 The following assumptions/simpilifications has been made:
 <ul>
@@ -27,7 +27,7 @@ The following assumptions/simpilifications has been made:
 |  2022|  603.2| 661.5|1519.9|1344.9|1998.9|3007.9|1969.8|4282.3|3677.7| 792.0| 698.3| 492.6 |21049.0|
 |  2023|  542.3| 665.5| 956.7| 935.3| 685.4|1057.6| 617.5| 555.5| 431.6| 340.9| 429.6| 146.7 | 7364.8|
 
-The table above display example system 1 earnings in SEK when we apply our solar panel power production model to historical spot prices of electricity. Note that year 2022 stand out due to high electric prices, probably because the start of the Ukraine war.
+The table above display example system 1 earnings in SEK when we apply its solar panel power production model to historical spot prices of electricity. Note that year 2022 stand out due to high electric prices, probably because the start of the Ukraine war.
 
                            System 2 Earnings (SEK) (10kWp, 8kW Inverter)
                           
@@ -42,7 +42,7 @@ The table above display example system 1 earnings in SEK when we apply our solar
 |  2022|  558.4| 606.2|1455.8|1287.1|1863.5|2751.5|1739.5|3783.5|3332.2| 727.9| 648.3| 535.4 |19289.2|
 |  2023|  502.4| 612.9| 883.9| 880.0| 673.2| 971.2| 563.8| 496.8| 400.4| 322.9| 400.1| 159.3 | 6866.8|
 
-The table above display example system 2 earnings in SEK when we apply our solar panel power production model to historical spot prices of electricity. Note that year 2022 stand out due to high electric prices, probably because the start of the Ukraine war.
+The table above display example system 2 earnings in SEK when we apply its solar panel power production model to historical spot prices of electricity. Note that year 2022 stand out due to high electric prices, probably because the start of the Ukraine war.
 
     System 1 Power Sold and Power Produced Overflow (kWh) (10kWp, 8kW Inverter)
     
@@ -65,9 +65,9 @@ The table above display example system 2 earnings in SEK when we apply our solar
 |2023|   465.3| 699.7|1084.0|1348.4|1702.7|1947.1|1702.7|1393.4|1348.4| 774.7| 450.3| 156.0 |13072.7|
 |     |    0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0 |0.0|
 
-The table above displays the power sold from example system 1 when we apply hour solar panel power production model. Below each value is the overflow power produced by the solar panels which could not be sold due to limitations of the inverter. Note that year 2016 and 2020 stands out because of leap years.
+The table above displays the power sold from example system 1 when we apply its solar panel power production model. Below each value is the overflow power produced by the solar panels which could not be sold due to limitations of the inverter. Note that year 2016 and 2020 stands out because of leap years.
 
-     System 2 Power Sold (Black) and Power Produced Overflow (Red) (kWh) (10kWp, 8kW Inverter)
+     System 2 Power Sold and Power Produced Overflow (kWh) (10kWp, 8kW Inverter)
     
 |  Year|    Jan|   Feb|   Mar|   Apr|   May|   Jun|   Jul|   Aug|   Sep|   Oct|   Nov|   Dec|   SUM|
 |------|------|------|------|------|------|------|------|------|------|------|------|------|------|
@@ -88,11 +88,11 @@ The table above displays the power sold from example system 1 when we apply hour
 |2023|   439.6| 640.1| 977.8|1206.7|1516.0|1727.5|1516.0|1246.9|1206.7| 708.7| 425.4| 170.5 |11781.8|
 |     |    0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0|   0.0 |0.0|
 
-The table above displays the power sold from example system 2 when we apply hour solar panel power production model. Below each value is the overflow power produced by the solar panels which could not be sold due to limitations of the inverter. Note that year 2016 and 2020 stands out because of leap years.
+The table above displays the power sold from example system 2 when we apply its solar panel power production model. Below each value is the overflow power produced by the solar panels which could not be sold due to limitations of the inverter. Note that year 2016 and 2020 stands out because of leap years.
 
 
 # Modelling the Power Production
-The two systems are modelled after real world data with linear interpolation. From a colleague, I received the power production per hour for one day in June and one day in December of both his systems. From these two days, I used linear interpolation to estimate the power produced at a certain hour for any day of the year. As a simplification, I assume that every day in a month produce on average the same amount of power.
+The two systems are modelled after real world data with linear interpolation. I received the data from a colleague and consists of the power production per hour for one day in June and one day in December of both his systems. From these two days, I used linear interpolation to estimate the power produced at a certain hour for any day of the year. As a simplification, I assume that every day in a month produce on average the same amount of power.
 
 ### System 1 Specifics
 - 15.7kWp with a 12kW inverter
@@ -115,7 +115,7 @@ The two systems are modelled after real world data with linear interpolation. Fr
 |:-:|:-:|
 |![](doc/normalized_15_7kwp_system_power_production_per_hour_and_day_in_month.png "System 1 Model")| ![](doc/normalized_12kwp_system_power_production_per_hour_and_day_in_month.png "System 1 Model")|
 
-# Historic Spot Price of Electricity
+# Historical Spot Price of Electricity
 [NordPool](https://www.nordpoolgroup.com) provides the spot prices for electricty in the nordic, however their historical data is locked behind a paywall. Luckily the danish government provides this [data](https://www.energidataservice.dk/tso-electricity/elspotprices#metadata-info) from NordPool for free. This means that we need to convert the spot price per MWh from EUR to SEK.
 
 Source of currency exchange, [European Central Bank](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-sek.en.html).
