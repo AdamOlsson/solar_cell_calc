@@ -138,7 +138,7 @@ The result of the currency exchange can be found in [this file](elspotprices_sek
 |  2023|  851.4|1044.9|1502.1|1468.4|1076.1|1660.5| 969.5| 872.1| 677.6| 535.2| 674.5| 230.3 |11562.7|
 
 
-            System 1 Power Sold (Black) and Power Produced Overflow (Blue) (kWh) (15.7kWp, 12kW Inverter)
+            System 1 Power Sold and Power Produced Overflow (kWh) (15.7kWp, 12kW Inverter)
   
 |  Year|    Jan|   Feb|   Mar|   Apr|   May|   Jun|   Jul|   Aug|   Sep|   Oct|   Nov|   Dec|   SUM|
 |------|------|------|------|------|------|------|------|------|------|------|------|------|------|
